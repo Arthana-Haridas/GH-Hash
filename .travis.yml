@@ -1,0 +1,7 @@
+jobs:
+  include:
+    - stage: test
+      script:
+        - make test
+        - COMMIT_HASH=$(grep -o -E '[0-9a-f]{40}' <<< "$TRAVIS_BUILD_LOG")
+        - echo "Commit hash: $COMMIT_HASH"
