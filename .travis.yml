@@ -2,6 +2,6 @@ jobs:
   include:
     - stage: test
       script:
-        - commit hash
-        - COMMIT_HASH=$(grep -o -E '60684f80b2b36e6a90b8a49cabd03200cc07fd69' <<< "$TRAVIS_BUILD_LOG")
-        - echo "Commit hash: $COMMIT_HASH"
+        - echo "Building commit $TRAVIS_COMMIT"
+        #- COMMIT_HASH=$(grep -o -E '60684f80b2b36e6a90b8a49cabd03200cc07fd69' <<< "$TRAVIS_BUILD_LOG")
+        #- echo "Commit hash: $COMMIT_HASH"
